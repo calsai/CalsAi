@@ -1,184 +1,187 @@
-# 🏋️ Weight Loss Tracking App
+# 🏋️ CalsAi - Weight Loss & Nutrition Tracking
 
-## Creat de Onofrei Alexandru
+Aplicație web completă pentru managementul slăbirii și nutriției, cu inteligență artificială avansată pentru analiza alimentară și coaching personalizat.
 
-O aplicație web completă pentru ajutarea la slăbire, construită cu Next.js 14, TypeScript, PostgreSQL și TailwindCSS.
+## 🤖 Funcționalități AI & Chat
 
-## 🌟 Funcționalități Principale
+- **Chat natural cu AI**: Conversație inteligentă pentru logging alimente prin mesaje naturale ("am mâncat 2 ouă și o felie de pâine")
+- **Analiza automată cu Perplexity AI**: Extragerea automată a informațiilor nutriționale din text natural
+- **Coaching nutrițional cu GitHub AI**: Sfaturi personalizate bazate pe profilul utilizatorului
+- **Generare rețete cu Google Gemini**: Sugestii personalizate de rețete pe baza preferințelor și obiectivelor
+- **Pattern matching avansat**: Recunoaștere automată a alimentelor românești din conversații
 
-### 📱 Scanare Inteligentă de Produse
+## 📊 Funcționalități principale
 
-- **OCR avansată** cu Tesseract.js pentru extragerea textului din imagini
-- **Recunoaștere automată** a informațiilor nutriționale de pe etichete
-- **Calculare automată** a caloriilor pe porție sau per 100g
-- **Salvare în jurnal** a produselor scanate
-
-### 📊 Jurnal Alimentar Zilnic
-
-- **Tracking complet** al meselor zilnice (mic dejun, prânz, cină, gustări)
-- **Monitorizare calorii** și macronutrienți (proteine, carbohidrați, grăsimi)
-- **Vizualizare progres** cu grafice și statistici
-- **Istoricul zilnic** cu navigare între zile
-
-### 🍽️ Sugestii Personalizate de Rețete
-
-- **Recomandări inteligente** bazate pe caloriile rămase din planul zilnic
-- **Filtrare avansată** după tipul de masă și ingrediente excluse
-- **Integrare API** cu Spoonacular pentru rețete externe
-- **Salvare favorite** și sistem de evaluare
-
-### 👤 Autentificare și Profil Utilizator
-
-- **Autentificare securizată** cu NextAuth.js și JWT
-- **Profil personalizat** cu obiective de slăbit
-- **Calculare automată** a aportului caloric zilnic folosind ecuația Harris-Benedict
-- **Niveluri de activitate** pentru calculul precis al nevoilor calorice
-
-### 🎨 UI Modern și Responsiv
-
-- **Design modern** cu TailwindCSS
-- **Complet responsiv** pentru toate dispozitivele
-- **Componente reutilizabile** și intuitive
-- **Experiență utilizator optimizată**
+- **Jurnal alimentar inteligent**: Tracking calorii și macronutrienți cu adăugare prin chat natural
+- **Analytics nutrițional avansat**: Statistici detaliate, analiza modelelor alimentare, distribuția macronutrienților
+- **Estimarea automată a nutriției**: Calcul automat pentru alimente necunoscute folosind AI
+- **Profil personalizat**: Obiective calorice calculate cu ecuația Harris-Benedict, adaptate la nivelul de activitate
+- **Istoricul conversațiilor**: Sesiuni de chat salvate cu contextul păstrat
 
 ## 🛠️ Stack Tehnologic
 
 ### Frontend
 
-- **Next.js 14** - React framework cu App Router
-- **TypeScript** - Type safety și developer experience îmbunătățit
-- **TailwindCSS** - Styling modern și responsiv
-- **Lucide React** - Iconuri moderne și elegante
-- **React Hook Form** - Gestionarea formularelor
-- **Zod** - Validare schema
+- **Next.js 14+** cu App Router și TypeScript
+- **TailwindCSS** pentru styling modern și responsiv
+- **React Hook Form** pentru gestionarea formularelor
+- **Headless UI** pentru componente accesibile
 
-### Backend
+### Backend & Database
 
-- **Next.js API Routes** - Backend integrat
-- **PostgreSQL** - Baza de date relațională
-- **Prisma ORM** - Object-Relational Mapping
-- **NextAuth.js** - Autentificare și sesiuni
-- **bcryptjs** - Hashing parole securizat
+- **Next.js API Routes** pentru backend integrat
+- **PostgreSQL** cu **Supabase** pentru baza de date și autentificare
+- **Prisma ORM** pentru operațiile cu baza de date
+- **Row Level Security (RLS)** pentru securitate avansată
 
-### Servicii Externe
+### Integrări AI & APIs
 
-- **Tesseract.js** - Optical Character Recognition (OCR)
-- **Spoonacular API** - Baza de date de rețete
-- **USDA Food API** - Date nutriționale (opțional)
-- **Sharp** - Procesarea imaginilor
+- **Perplexity AI** - Analiza nutrițională din text natural
+- **GitHub Models (GPT-4.1)** - Coaching nutrițional și chat inteligent
+- **Google Gemini** - Generarea rețetelor personalizate
+- **Spoonacular API** - Baza de date de rețete externe
+- **Tesseract.js** - OCR pentru scanarea etichetelor (în dezvoltare)
 
-## 🚀 Instalare și Configurare
+### Autentificare & Securitate
 
-### Cerințe Preliminare
+- **Supabase Auth** cu politici RLS
+- **NextAuth.js** pentru sesiuni JWT
+- **bcryptjs** pentru hashing securizat
 
-- Node.js 18.0.0 sau mai nou
-- PostgreSQL 12 sau mai nou
-- npm, yarn, pnpm sau bun
+## 📁 Structură proiect
 
-### 1. Instalarea Dependințelor
+### API Routes (`src/app/api/`)
+
+- `natural-chat/` - Chat natural cu AI pentru logging alimente
+- `nutrition-coach/` - Coaching personalizat cu GitHub AI
+- `smart-chat/` - Chat inteligent cu pattern matching
+- `recipe-generator/` - Generare rețete cu Google Gemini
+- `estimate-nutrition/` - Estimarea automată a valorilor nutriționale
+- `food-analytics/` - Analize și statistici alimentare
+- `food-entries/` - CRUD pentru intrările alimentare
+- `food-journal/` - Managementul jurnalului zilnic
+- `profile/` - Gestionarea profilului utilizatorului
+- `auth/` - Autentificare cu NextAuth.js
+
+### Componente UI (`src/components/`)
+
+- `NaturalChat.tsx` - Chat natural cu AI pentru tracking alimente
+- `FoodAnalytics.tsx` - Dashboard cu statistici și analize
+- `RecipeGenerator.tsx` - Generator de rețete personalizate
+- `FoodJournal.tsx` - Jurnal alimentar zilnic
+- `ProfileSetup.tsx` - Configurarea profilului utilizatorului
+- `EnhancedFoodSearch.tsx` - Căutare avansată de alimente
+
+## 🚀 Instalare și rulare
+
+### Cerințe preliminare
+
+- Node.js 18+
+- PostgreSQL sau cont Supabase
+- API Keys pentru serviciile AI (opțional)
+
+### 1. Instalează dependențele
 
 ```bash
 npm install
 ```
 
-### 2. Configurarea Bazei de Date
+### 2. Configurare variabile de mediu
 
-#### Instalarea PostgreSQL
-
-```bash
-# Windows (cu Chocolatey)
-choco install postgresql
-
-# macOS (cu Homebrew)
-brew install postgresql
-
-# Ubuntu/Debian
-sudo apt-get install postgresql postgresql-contrib
-```
-
-#### Crearea Bazei de Date
-
-```sql
-CREATE DATABASE weight_loss_app;
-CREATE USER weight_loss_user WITH ENCRYPTED PASSWORD 'your_password';
-GRANT ALL PRIVILEGES ON DATABASE weight_loss_app TO weight_loss_user;
-```
-
-### 3. Configurarea Variabilelor de Mediu
-
-Copiază `.env.example` în `.env.local` și completează variabilele:
-
-```bash
-cp .env.example .env.local
-```
-
-Editează `.env.local`:
+Creează fișierul `.env.local`:
 
 ```env
-# Database
-DATABASE_URL="postgresql://weight_loss_user:your_password@localhost:5432/weight_loss_app?schema=public"
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 
-# NextAuth.js
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-change-in-production"
+# NextAuth
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret_key
 
-# API Keys (opționale)
-SPOONACULAR_API_KEY="your-spoonacular-api-key"
-USDA_API_KEY="your-usda-api-key"
+# AI APIs (opționale)
+PERPLEXITY_API_KEY=your_perplexity_key
+GITHUB_TOKEN=your_github_token
+GEMINI_API_KEY=your_gemini_key
+SPOONACULAR_API_KEY=your_spoonacular_key
 ```
 
-### 4. Migrarea Bazei de Date
+### 3. Configurare baza de date
 
 ```bash
-npx prisma migrate dev --name init
+# Pentru Supabase - rulează schema din supabase-schema.sql
+# Pentru PostgreSQL local
+npx prisma migrate dev
 npx prisma generate
 ```
 
-### 5. Rularea Aplicației
+### 4. Pornește aplicația
 
 ```bash
 npm run dev
 ```
 
-Aplicația va fi disponibilă la `http://localhost:3000`
+Accesează [http://localhost:3000](http://localhost:3000)
 
-## 🔐 Obținerea API Keys
+## 🎯 Funcționalități detaliate
 
-### Spoonacular API
+### Chat Natural cu AI
 
-1. Creează cont pe [Spoonacular API](https://spoonacular.com/food-api)
-2. Obții API key gratuit (150 cereri/zi)
-3. Adaugă key-ul în `.env.local`
+- Scrie natural: _"am mâncat 2 ouă și o felie de pâine la micul dejun"_
+- AI-ul extrage automat alimentele și le adaugă în jurnal
+- Suport pentru alimente românești cu pattern matching
+- Conversații salvate cu istoric și context păstrat
 
-## 📱 Funcționalități Detaliate
+### Analytics și Statistici
 
-### Scanarea Produselor
+- Analiza modelelor alimentare pe 7/30/90 zile
+- Distribuția macronutrienților cu grafice
+- Top alimente consumate și ore de masă preferate
+- Analiza dietei cu recomandări AI personalizate
 
-- Suportă formatele: PNG, JPG, JPEG, GIF, BMP, WebP
-- Dimensiune maximă: 5MB
-- Procesare automată cu OCR pentru extragerea textului
-- Identificare automată a valorilor nutriționale
+### Generarea Rețetelor
 
-### Calcularea Caloriilor
+- Rețete personalizate bazate pe profil și preferințe
+- Ingrediente disponibile și restricții alimentare
+- Calcul automat al valorilor nutriționale
+- Timp de preparare și numărul de porții
 
-- Ecuația Harris-Benedict pentru metabolismul basal
-- Ajustări pentru nivelul de activitate fizică
-- Deficit caloric automat pentru pierderea în greutate
+## 🔧 Configurare API Keys
 
-## 🚀 Deploy în Producție
+### Perplexity AI (pentru analiza nutrițională)
 
-### Vercel (Recomandat)
+1. Creează cont pe [Perplexity](https://www.perplexity.ai/)
+2. Obține API key din dashboard
+3. Adaugă `PERPLEXITY_API_KEY` în `.env.local`
 
-```bash
-# Instalează Vercel CLI
-npm i -g vercel
+### GitHub Models (pentru coaching)
 
-# Deploy
-vercel
-```
+1. Accesează [GitHub Models](https://models.github.ai/)
+2. Generează Personal Access Token
+3. Adaugă `GITHUB_TOKEN` în `.env.local`
 
-### Railway (Pentru baza de date)
+### Google Gemini (pentru rețete)
 
-1. Creează cont pe [Railway](https://railway.app)
-2. Creează serviciu PostgreSQL
-3. Copiază DATABASE_URL în variabilele de mediu
+1. Accesează [Google AI Studio](https://aistudio.google.com/)
+2. Creează API key gratuit
+3. Adaugă `GEMINI_API_KEY` în `.env.local`
+
+## 📊 Schema bazei de date
+
+Aplicația folosește Supabase cu următoarele tabele:
+
+- `profiles` - Informații utilizatori și obiective
+- `food_entries` - Intrări alimentare zilnice
+- `chat_messages` - Istoricul conversațiilor
+- `recipes` - Rețete generate și salvate
+
+Vezi `supabase-schema.sql` pentru schema completă cu RLS policies.
+
+## Documentație API
+
+Toate endpoint-urile API sunt documentate în cod (`src/app/api/`). Folosește TypeScript strict și validare atât pe frontend cât și pe backend.
+
+## Contribuții
+
+Pull requests și sugestii sunt binevenite!
