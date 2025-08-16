@@ -1,5 +1,7 @@
 # 🏋️ Weight Loss Tracking App
 
+## Creat de Onofrei Alexandru
+
 O aplicație web completă pentru ajutarea la slăbire, construită cu Next.js 14, TypeScript, PostgreSQL și TailwindCSS.
 
 ## 🌟 Funcționalități Principale
