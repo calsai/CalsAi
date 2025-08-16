@@ -2,6 +2,8 @@
 
 Aplicație web completă pentru managementul slăbirii și nutriției, cu inteligență artificială avansată pentru analiza alimentară și coaching personalizat.
 
+## Un proiect realizat de Onofrei Alexandru (mrsleep28)
+
 ## 🤖 Funcționalități AI & Chat
 
 - **Chat natural cu AI**: Conversație inteligentă pentru logging alimente prin mesaje naturale ("am mâncat 2 ouă și o felie de pâine")
