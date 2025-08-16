@@ -1,0 +1,9 @@
+{
+  "/api/estimate-nutrition/route": "app/api/estimate-nutrition/route.js",
+  "/api/food-analytics/route": "app/api/food-analytics/route.js",
+  "/api/food-journal-new/route": "app/api/food-journal-new/route.js",
+  "/api/food-journal/route": "app/api/food-journal/route.js",
+  "/api/natural-chat/route": "app/api/natural-chat/route.js",
+  "/api/profile/route": "app/api/profile/route.js",
+  "/page": "app/page.js"
+}
